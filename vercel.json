@@ -1,0 +1,15 @@
+{
+    "name": "esgotamento-sanitario-servidor",
+    "version": 2,
+    "public": true,
+    "build": {
+        "src": "api/server.js",
+        "use": "@vercel/node"
+    },
+    "routes": [
+        {
+            "src": "api/server.js",
+            "dest": "api/server.js"
+        }
+    ]
+}
