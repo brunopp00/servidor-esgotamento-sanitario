@@ -41,6 +41,24 @@ app.post('/', function (req, res) {
     if (error) {
       res.status(500).json({ error: 'Erro ao enviar o email' });
     } else {
+        const transporter2 = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth: {
+              user: process.env.EMAIL,
+              pass: process.env.SENHA_EMAIL,
+              authMethod: 'LOGIN'
+            },
+          });
+        
+          const mailOptions2 = {
+            from: process.env.EMAIL,
+            to: req.body.email,
+            subject:'Enviado com sucesso!!!',
+            text: 'Sua duvida foi enviada com sucesso e será respondida em breve.',
+          };
+          transporter2.sendMail(mailOptions2);
       res.status(200).json({ message: 'Email enviado com sucesso' });
     }
   });
