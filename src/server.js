@@ -57,7 +57,7 @@ app.post('/', function (req, res) {
             to: req.body.email,
             subject:'Enviado com sucesso!!!',
             text: `Sua duvida foi enviada com sucesso e será respondida em breve.
-                    Site: https://esgotamento-sanitario-607rxiwx1-brunopp00.vercel.app/`,
+                    Site: https://esgotamento-sanitario.vercel.app/`,
           };
           transporter2.sendMail(mailOptions2);
       res.status(200).json({ message: 'Email enviado com sucesso' });
