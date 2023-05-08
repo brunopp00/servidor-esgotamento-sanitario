@@ -1,5 +1,5 @@
 {
-    "name": "esgotamento-sanitario-servidor",
+    "name": "servidor",
     "version": 2,
     "public": true,
     "build": {
