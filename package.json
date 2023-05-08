@@ -2,11 +2,11 @@
     "name": "esgotamento-sanitario-servidor",
     "version": "1.0.0",
     "description": "",
-    "main": "api/server.js",
+    "main": "src/server.js",
     "type": "module",
     "scripts": {
         "start": "node .",
-        "dev": "node --watch api/server.js"
+        "dev": "node --watch src/server.js"
     },
     "keywords": [],
     "author": "",
